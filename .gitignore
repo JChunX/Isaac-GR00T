@@ -1,6 +1,8 @@
 # C extensions
 *.so
 
+# data
+demo_data/**
 # Distribution / packaging
 .Python
 build/
