@@ -74,6 +74,7 @@ class TrainRunner:
         self.rank = int(os.environ.get("RANK", 0))
         if self.rank == 0:
             metadata_json = {}
+            breakpoint()
             if os.path.exists(self.exp_cfg_dir / "metadata.json"):
                 with open(self.exp_cfg_dir / "metadata.json", "r") as f:
                     metadata_json = json.load(f)

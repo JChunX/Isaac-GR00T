@@ -26,3 +26,8 @@ class EmbodimentTag(Enum):
     """
     Any new embodiment for finetuning.
     """
+
+    SO100 = "so100"
+    """
+    The SO100 dataset.
+    """

@@ -126,7 +126,7 @@ class LeRobotSingleDataset(Dataset):
             self.tag = embodiment_tag.value
         else:
             self.tag = embodiment_tag
-
+        breakpoint()
         self._metadata = self._get_metadata(EmbodimentTag(self.tag))
         self._trajectory_ids, self._trajectory_lengths = self._get_trajectories()
         self._all_steps = self._get_all_steps()
@@ -247,7 +247,6 @@ class LeRobotSingleDataset(Dataset):
         Returns:
             dict: The metadata for the dataset.
         """
-
         # 1. Modality metadata
         modality_meta_path = self.dataset_path / LE_ROBOT_MODALITY_FILENAME
         assert (
