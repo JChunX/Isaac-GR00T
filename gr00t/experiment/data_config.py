@@ -687,6 +687,25 @@ class Gr1ArmsWaistDataConfig(Gr1ArmsOnlyDataConfig):
 
 ###########################################################################################
 
+
+class BimanualSo100DataConfig(So100DataConfig):
+    video_keys = ["video.main", "video.cv", "video.webcam"]
+    state_keys = [
+        "state.main_arm", 
+        "state.main_gripper", 
+        "state.cv_arm", 
+        "state.cv_gripper"]
+    action_keys = [
+        "action.main_arm",
+        "action.main_gripper",
+        "action.cv_arm",
+        "action.cv_gripper",
+        ]
+    language_keys = ["annotation.human.task_description"]
+
+
+###########################################################################################
+
 DATA_CONFIG_MAP = {
     "gr1_arms_waist": Gr1ArmsWaistDataConfig(),
     "gr1_arms_only": Gr1ArmsOnlyDataConfig(),
@@ -695,4 +714,5 @@ DATA_CONFIG_MAP = {
     "bimanual_panda_hand": BimanualPandaHandDataConfig(),
     "single_panda_gripper": SinglePandaGripperDataConfig(),
     "so100": So100DataConfig(),
+    "bimanual_so100": BimanualSo100DataConfig(),
 }
